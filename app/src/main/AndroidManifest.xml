@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.run.donkey.lolapi">
+    package="com.run.donkey.lolapi" >
+
+    <uses-sdk
+        android:maxSdkVersion="23"
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
-    <uses-sdk
-        android:minSdkVersion="21"
-        android:targetSdkVersion="21"
-        android:maxSdkVersion="23" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logonovo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Atividades.AtSummonerData">
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        <activity android:name=".Atividades.AtSummonerData"
+           android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden">
+
+        </activity>
+        <activity android:name=".Atividades.introAtivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
